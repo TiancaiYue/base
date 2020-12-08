@@ -1,0 +1,52 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven {
+            url 'http://nexus.yozocloud.cn/repository/maven-releases/'
+            credentials {
+                username "dev"
+                password "yozosoft"
+            }
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.0-beta01'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
+        classpath 'com.huawei.agconnect:agcp:1.4.0.300'
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven {
+            url 'http://nexus.yozocloud.cn/repository/maven-releases/'
+            credentials {
+                username "dev"
+                password "yozosoft"
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    compileSdkVersion = 29
+    buildToolsVersion = "29.0.2"
+    minSdkVersion = 20
+    targetSdkVersion = 28
+    supportVersion = '28.0.3'
+    applicationId = "com.jewel.baseapplication"
+    versionCode = 1
+    versionName = '1.0.0'
+}

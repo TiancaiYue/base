@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="YZTitleNormalBar">
+        <attr name="tb_title_is_back" format="boolean" />
+        <attr name="tb_title_is_line" format="boolean" />
+        <attr name="tb_title" format="string" />
+        <attr name="tb_title_left" format="string" />
+        <attr name="tb_title_right" format="string" />
+        <attr name="tb_title_color" format="color" />
+        <attr name="tb_title_background" format="color" />
+        <attr name="tb_title_left_color" format="color" />
+        <attr name="tb_title_right_color" format="color" />
+        <attr name="tb_left_icon" format="reference" />
+        <attr name="tb_right_icon" format="reference" />
+        <attr name="tb_right_more_icon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RoundProgressBar">
+        <attr name="max" format="integer" />
+        <attr name="startAngle" format="integer" />
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension" />
+        <attr name="backColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="textWithSting" format="boolean" />
+        <attr name="center_textSize" format="dimension" />
+        <attr name="textIsDisplayable" format="boolean" />
+        <attr name="style">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

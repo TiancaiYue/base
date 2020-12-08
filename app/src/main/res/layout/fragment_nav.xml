@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/color_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <cn.widget.NavigationButton
+        android:id="@+id/nav_item_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <cn.widget.NavigationButton
+        android:id="@+id/nav_item_file"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <cn.widget.NavigationButton
+        android:id="@+id/nav_item_appliance"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>

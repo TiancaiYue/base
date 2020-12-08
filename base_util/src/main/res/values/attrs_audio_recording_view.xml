@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="AudioRecordingView">
+        <attr name="state" format="enum">
+            <enum name="recording" value="0"/>
+            <enum name="cancel" value="1" />
+        </attr>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
+</resources>

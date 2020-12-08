@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Attrs_EmptyLayout">
+        <attr name="src" format="reference"/>
+        <attr name="emptyTitle" format="string"/>
+    </declare-styleable>
+</resources>

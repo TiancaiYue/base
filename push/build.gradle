@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.compileSdkVersion
+
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        manifestPlaceholders = [
+                MI_APP_ID    : "2882303761517918740",
+                MI_APP_KEY   : "5561791882740",
+
+                OPPO_APP_SEC : "25181afb4f224527ba90a2ddabb399c6",
+                OPPO_APP_KEY : "f0782978f2a343be988178a7d7e9e19f",
+
+                VIVO_APP_ID  : "100678872",
+                VIVO_APP_KEY : "14a8403f1dcb60cd2692f273a0085ed6",
+
+                MEIZU_APP_ID : "133476",
+                MEIZU_APP_KEY: "ce09ffae4e8e4793a8df427c81d1a4fc",
+
+                JPUSH_PKGNAME: rootProject.ext.applicationId,
+                JPUSH_APPKEY : "779138dd298373e2e082da96", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '29.0.2'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // gson
+    api 'com.google.code.gson:gson:2.8.6'
+    // EventBus
+    api 'org.greenrobot:eventbus:3.1.1'
+    // 推送
+    api 'cn.jiguang.sdk:jpush:3.6.6'  // 此处以JPush 3.6.6 版本为例。
+    api 'cn.jiguang.sdk:jcore:2.3.8'  // 此处以JCore 2.3.8 版本为例。
+    // meizu
+    implementation 'com.meizu.flyme.internet:push-internal:3.9.7'
+    // oppo
+    implementation("com.yozo.android.push:oppo:2.1.0@aar")
+    // 华为
+    implementation 'com.huawei.hms:push:5.0.0.300'
+    // vivo
+    implementation("com.yozo.android.push:vivo:2.9.0.0@aar")
+    // 小米
+    implementation("com.yozo.android.push:xiaomi:3.6.9@jar")
+}

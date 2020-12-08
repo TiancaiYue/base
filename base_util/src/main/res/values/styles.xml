@@ -1,0 +1,99 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarSize">44dp</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/color_black_1b</item>
+        <item name="colorAccent">@color/color_blue</item>
+        <item name="android:colorBackground">@color/color_white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+        <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="android:actionMenuTextColor">@color/color_gray_light</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverflowStyle</item>
+        <item name="android:popupMenuStyle">@style/PopMenuStyle</item>
+        <item name="popupMenuStyle">@style/PopMenuStyle</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="OverflowStyle">
+        <item name="android:src">@mipmap/icon_more</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="MenuTextStyle">
+        <item name="android:textColor">@color/color_blue</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_out_left</item>
+    </style>
+
+    <style name="activityDialogAnimation" parent="android:Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <!-- 弹出框,无遮罩,可以关闭-->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <!--去掉标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--去掉背景色-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--点击外部是否关闭dialog-->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <!--背景是否变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--背景暗度-->
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="MyDialog">
+        <!-- alertDialog窗口背景色 -->
+        <item name="android:windowBackground">@color/color_white</item>
+        <!--dialog是否有边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--dialog是否有标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--是否有遮盖(eg.Activity的闪屏页)-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--进出动画-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/color_white</item>
+        <item name="colorAccent">@color/color_blue</item>
+        <item name="colorPrimaryDark">@color/color_black_1b</item>
+        <item name="android:colorBackground">@color/color_white</item>
+        <item name="android:popupMenuStyle">@style/PopMenuStyle</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <!--v7 -->
+        <item name="popupMenuStyle">@style/PopMenuStyle</item>
+    </style>
+
+    <style name="PopMenuStyle" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@color/color_white</item>
+    </style>
+</resources>
